@@ -13,6 +13,7 @@
 		463B0CCF29FC192800DA5B42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463B0CCD29FC192800DA5B42 /* Main.storyboard */; };
 		463B0CD129FC192A00DA5B42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463B0CD029FC192A00DA5B42 /* Assets.xcassets */; };
 		463B0CD429FC192A00DA5B42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463B0CD229FC192A00DA5B42 /* LaunchScreen.storyboard */; };
+		463B0CDC29FCD0B600DA5B42 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463B0CDB29FCD0B600DA5B42 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		463B0CD029FC192A00DA5B42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		463B0CD329FC192A00DA5B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		463B0CD529FC192A00DA5B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		463B0CDB29FCD0B600DA5B42 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				463B0CC729FC192800DA5B42 /* AppDelegate.swift */,
 				463B0CC929FC192800DA5B42 /* SceneDelegate.swift */,
+				463B0CDB29FCD0B600DA5B42 /* Extensions.swift */,
 				463B0CCB29FC192800DA5B42 /* ViewController.swift */,
 				463B0CCD29FC192800DA5B42 /* Main.storyboard */,
 				463B0CD029FC192A00DA5B42 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				463B0CCC29FC192800DA5B42 /* ViewController.swift in Sources */,
 				463B0CC829FC192800DA5B42 /* AppDelegate.swift in Sources */,
 				463B0CCA29FC192800DA5B42 /* SceneDelegate.swift in Sources */,
+				463B0CDC29FCD0B600DA5B42 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

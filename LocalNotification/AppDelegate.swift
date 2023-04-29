@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        //앱 설치하고 제일 처음 실행할때 수신 여부
+        if #available(iOS 10.0, *) {
+            let notificationCenter = UNUserNotificationCenter.current()
+            notificationCenter.requestAuthorization(options: [.alert,.badge,.sound]) { (didAllow,e) in
+            }
+        }
+        
+        UNUserNotificationCenter.current().delegate = self
         return true
     }
 
@@ -34,3 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+//??
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .list, .badge, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+       
+      
+        // 어떤 알림인지에 따라 그 알림을 클릭 한 후 이벤트를 설정할 수 있다.
+        if response.notification.request.identifier == "wakeup" {
+                    let userInfo = response.notification.request.content.userInfo
+                    print(userInfo["name"]!)
+                }
+        
+        completionHandler()
+    }
+}
